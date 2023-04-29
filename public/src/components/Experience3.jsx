@@ -1,6 +1,6 @@
 import { MeshReflectorMaterial, PresentationControls, Stage } from "@react-three/drei";
 import { Suspense } from "react";
-import Skater from "./Skater";
+import Skate from "./Skate";
 
 const Experience3 = () => {
 
@@ -14,7 +14,7 @@ const Experience3 = () => {
         >
             <Stage environment={"sunset"} intensity={0.6} contactShadow={false}>
                 <Suspense fallback={null}>
-                    <Skater />
+                    <Skate />
                 </Suspense>
             </Stage>
             <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.091, 0]}>

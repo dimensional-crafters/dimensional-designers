@@ -1,12 +1,33 @@
 import { tapeColors, useCustomization, wheelColors } from "../contexts/Customization";
 
 const Configurator = () => {
-    const {tapeColor, setTapeColor, wheelColor, setWheelColor} = useCustomization();
+    const {shape, setShape, tapeColor, setTapeColor, wheelColor, setWheelColor} = useCustomization();
     
     return ( 
     
     <div className="configurator">
 
+        <div className="configurator_section">
+            <div className="configurator_section_title">
+                Skateboard Shape
+            </div>
+            <div className="configurator_section_values">
+                <div 
+                    className={`item ${shape === 1 ? "item--active" : ""}`}
+                    onClick={() => setShape(1)}>
+                    <div className="item_label">
+                        Cruiser
+                    </div>
+                </div>
+                <div 
+                    className={`item ${shape === 2 ? "item--active" : ""}`}
+                    onClick={() => setShape(2)}>
+                    <div className="item_label">
+                        Classic
+                    </div>
+                </div>
+            </div>
+        </div>
         <div className="configurator_section">
             <div className="configurator_section_title">
                 Skateboard Color

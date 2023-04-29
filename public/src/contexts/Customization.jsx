@@ -73,11 +73,14 @@ export const wheelColors = [
   ];
 
 export const CustomizationProvider = (props) => {
+    const [shape, setShape] = useState(1);
     const [tapeColor, setTapeColor] = useState(tapeColors[0]);
     const [wheelColor, setWheelColor] = useState(wheelColors[0]);
     return ( 
     <CustomizationContext.Provider 
         value={{
+            shape,
+            setShape,
             tapeColor,
             setTapeColor,
             wheelColor,
